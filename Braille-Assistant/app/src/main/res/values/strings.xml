@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Braille Assistant</string>
+    <string name="on_off_recognition_button">ON/OFF</string>
+    <string name="rotation_correction_button">R/C</string>
+    <string name="capture_button">CAPTURE</string>
+    <string name="torch_button">TORCH</string>
+</resources>
