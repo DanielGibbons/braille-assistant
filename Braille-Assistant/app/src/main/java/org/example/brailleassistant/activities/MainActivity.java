@@ -150,26 +150,21 @@ public class MainActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
             case CAMERA_REQUEST_PERMISSION: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0) {
-                    if(grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                        // permission was granted
-                    } else {
-                        finish(); // close app
-                    }
-                }
+                closeAppIfPermissionsAreAbsent(grantResults);
                 return;
             }
             case WRITE_EXTERNAL_STORAGE_PERMISSION: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0) {
-                    if(grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                        // permission was granted
-                    } else {
-                        finish(); // close app
-                    }
-                }
+                closeAppIfPermissionsAreAbsent(grantResults);
                 return;
+            }
+        }
+    }
+
+    private void closeAppIfPermissionsAreAbsent(int[] grantResults) {
+        // If request is cancelled, the result arrays are empty.
+        if (grantResults.length > 0) {
+            if(grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+                finish(); // close app
             }
         }
     }

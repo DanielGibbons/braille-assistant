@@ -33,7 +33,7 @@ android {
 
     sourceSets {
         main {
-            jniLibs.srcDirs = ['/home/dan/Documents/Projects/Braille-Assistant/app/src/main/jniLibs']
+            jniLibs.srcDirs = ['/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/jniLibs']
         }
     }
 
