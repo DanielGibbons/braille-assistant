@@ -81,7 +81,7 @@ public class CameraOverlayRenderer {
     }
 
     // draws braille cells and corresponding translation on overlay using established matrices
-    public void drawBrailleTranslation(BrailleCellFinder.BrailleCellFinderOutput_t brailleCellLocations, String[][] translatedBraille, double rotation, Point rotationCentre) {
+    public void drawBrailleTranslation(BraillePipeline braillePipeline) {
 
         float[] srcRectangle = new float[4];
         float[] dstRectangle = new float[4];
@@ -92,12 +92,18 @@ public class CameraOverlayRenderer {
         int brailleLine = 0;
         int brailleCell = 0;
 
-        for (int i = 0; i < brailleCellLocations.brailleLines.length; i += 2) {
-            srcRectangle[2] = mResizedCameraPreviewWidth - brailleCellLocations.brailleLines[i]; // y1 (0.75 * 1080
-            srcRectangle[0] = mResizedCameraPreviewWidth - brailleCellLocations.brailleLines[i + 1]; // y2
-            for (int j = 0; j < brailleCellLocations.brailleCellColumns.length; j += 2) {
-                srcRectangle[1] = brailleCellLocations.brailleCellColumns[j]; // x1
-                srcRectangle[3] = brailleCellLocations.brailleCellColumns[j + 1]; // x2
+        short[] brailleLines = braillePipeline.getBrailleCellRowValues();
+        short[] brailleCellColumns = braillePipeline.getBrailleCellColumnValues();
+        double rotation = braillePipeline.getRotation();
+        Point rotationCentre = braillePipeline.getRotationCentre();
+        String[][] translatedBraille = braillePipeline.getBrailleCellTranslation();
+
+        for (int i = 0; i < brailleLines.length; i += 2) {
+            srcRectangle[2] = mResizedCameraPreviewWidth - brailleLines[i]; // y1 (0.75 * 1080
+            srcRectangle[0] = mResizedCameraPreviewWidth - brailleLines[i + 1]; // y2
+            for (int j = 0; j < brailleCellColumns.length; j += 2) {
+                srcRectangle[1] = brailleCellColumns[j]; // x1
+                srcRectangle[3] = brailleCellColumns[j + 1]; // x2
                 mMatrixScale.mapPoints(dstScaleRectangle, srcRectangle);
                 mMatrix.mapPoints(dstRectangle, dstScaleRectangle);
                 mCameraOverlayCanvas.save();

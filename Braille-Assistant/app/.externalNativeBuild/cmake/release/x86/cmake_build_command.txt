@@ -1,0 +1,19 @@
+Executable : /home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake
+arguments : 
+-H/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app
+-B/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/x86
+-DANDROID_ABI=x86
+-DANDROID_PLATFORM=android-23
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/build/intermediates/cmake/release/obj/x86
+-DCMAKE_BUILD_TYPE=Release
+-DANDROID_NDK=/home/dan/Android/Sdk/ndk/20.1.5948944
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_ANDROID_ARCH_ABI=x86
+-DCMAKE_SYSTEM_VERSION=23
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_ANDROID_NDK=/home/dan/Android/Sdk/ndk/20.1.5948944
+-DCMAKE_TOOLCHAIN_FILE=/home/dan/Android/Sdk/ndk/20.1.5948944/build/cmake/android.toolchain.cmake
+-G Ninja
+-DCMAKE_MAKE_PROGRAM=/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja
+jvmArgs : 
+

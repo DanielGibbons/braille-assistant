@@ -25,17 +25,12 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import org.example.brailleassistant.R;
-import org.example.brailleassistant.utils.BrailleCellCalculator;
-import org.example.brailleassistant.utils.BrailleCellFinder;
-import org.example.brailleassistant.utils.BrailleCellParser;
-import org.example.brailleassistant.utils.BrailleFilter;
-import org.example.brailleassistant.utils.BrailleRotationCorrection;
+import org.example.brailleassistant.processors.ProcessorRegistry;
+import org.example.brailleassistant.utils.BraillePipeline;
 import org.example.brailleassistant.utils.Camera;
 import org.example.brailleassistant.utils.CameraFrameReader;
 import org.example.brailleassistant.utils.CameraOverlayRenderer;
 import org.opencv.core.Mat;
-import org.opencv.core.Size;
-import org.opencv.imgproc.Imgproc;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -47,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     static {
         System.loadLibrary("opencv_java4");
+        System.loadLibrary("native-lib");
     }
 
     // Permission constants
@@ -70,11 +66,8 @@ public class MainActivity extends AppCompatActivity {
     private Camera mCamera;
 
     // Braille Recognition Modules
-    private BrailleFilter mBrailleFilter;
-    private BrailleRotationCorrection mBrailleRotationCorrection;
-    private BrailleCellFinder mCellFinder;
-    private BrailleCellCalculator mCellCalculator;
-    private BrailleCellParser mCellParser;
+    volatile private BraillePipeline braillePipeline;
+    private ProcessorRegistry processorRegistry;
 
 
     // Called when activity is created
@@ -100,17 +93,14 @@ public class MainActivity extends AppCompatActivity {
         mRotationCorrectionButton = findViewById(R.id.rotation_correction_button);
         assert mRotationCorrectionButton != null;
 
+        // Initialise processors
+        processorRegistry = new ProcessorRegistry();
+        braillePipeline = new BraillePipeline();
+
         // Initialise  Camera and CameraOverlayRenderer
         mCameraOverlayRenderer = new CameraOverlayRenderer(mCameraOverlayView);
         mCamera = new Camera(this, mCameraView, mOnFrameEventListener, mOnCameraPreviewSizeChangedListener);
 
-        // Initialise braille modules
-        mBrailleFilter = new BrailleFilter();
-        mBrailleRotationCorrection = new BrailleRotationCorrection();
-        mCellFinder = new BrailleCellFinder();
-        mCellCalculator = new BrailleCellCalculator();
-        mCellParser = new BrailleCellParser(0);
-        mBrailleFilter.setFilterType(BrailleFilter.FilterType_t.SingleSided);
 
     }
 
@@ -238,115 +228,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onFrameEvent(Mat brailleImage) {
 
-            // Braille recognition is active
-            if (mBrailleCellRecognitionActive) {
-
-                final BrailleCellFinder.BrailleCellFinderOutput_t brailleCellLocations;
-
-                // resize camera image
-                Mat brailleImageResized = new Mat();
-                Size newSize = new Size();
-                newSize.height = brailleImage.height() * 0.75;
-                newSize.width = brailleImage.width() * 0.75;
-                Imgproc.resize(brailleImage, brailleImageResized, newSize);
-
-                // filter image
-                BrailleFilter.BrailleFilterOutput_t filterOutput = mBrailleFilter.extractBrailleDots(brailleImageResized);
-
-                // rotation correction is turned on
-                if (mBrailleRotationCorrectionActive) {
-
-                    // correct image rotation
-                    final BrailleRotationCorrection.BrailleRotationCorrectionOutput_t adjustedFilterOutput = mBrailleRotationCorrection.correctImageRotation(filterOutput);
-
-                    // find braille cells
-                    brailleCellLocations = mCellFinder.calculateBrailleCells(adjustedFilterOutput.filterOutput.brailleImage);
-
-                    // cells found are of similar dimensions - valid
-                    if (brailleCellLocations.validity) {
-
-                        // calculate cell values
-                        short[][] brailleCellValues = mCellCalculator.calculateBrailleCells(brailleCellLocations.brailleLines, brailleCellLocations.brailleCellColumns, adjustedFilterOutput.filterOutput.brailleDotLocations);
-
-                        // translate braille to English
-                        final String[][] parsedBraille = mCellParser.parseBraille(brailleCellValues);
-
-                        // draw translation on overlay
-                        Handler main = new Handler(Looper.getMainLooper());
-                        main.post(new Runnable() {
-                            @Override
-                            public void run() {
-                                mCameraOverlayRenderer.drawBrailleTranslation(brailleCellLocations, parsedBraille, adjustedFilterOutput.rotation, adjustedFilterOutput.rotationCentre);
-                            }
-                        });
-
-                        // request next camera frame
-                        mCamera.getCameraFrame();
-
-                    } else {
-
-                        // draw translation on overlay
-                        Handler main = new Handler(Looper.getMainLooper());
-                        main.post(new Runnable() {
-                            @Override
-                            public void run() {
-                                mCameraOverlayRenderer.clearOverlay();
-                            }
-                        });
-
-                        // request next camera frame
-                        mCamera.getCameraFrame();
-
-                    }
-
-                } else { // rotation correction is turned off
-
-                    // find braille cells
-                    brailleCellLocations = mCellFinder.calculateBrailleCells(filterOutput.brailleImage);
-
-                    // cells found are of similar dimensions - valid
-                    if (brailleCellLocations.validity) {
-
-                        // calculate cell values
-                        short[][] brailleCellValues = mCellCalculator.calculateBrailleCells(brailleCellLocations.brailleLines, brailleCellLocations.brailleCellColumns, filterOutput.brailleDotLocations);
-
-                        // translate braille to English
-                        final String[][] parsedBraille = mCellParser.parseBraille(brailleCellValues);
-
-                        // draw translation on overlay
-                        Handler main = new Handler(Looper.getMainLooper());
-                        main.post(new Runnable() {
-                            @Override
-                            public void run() {
-                                mCameraOverlayRenderer.drawBrailleTranslation(brailleCellLocations, parsedBraille, 0, null);
-                            }
-                        });
-
-                        // request next camera frame
-                        mCamera.getCameraFrame();
-
-                    } else {
-
-                        // draw translation on overlay
-                        Handler main = new Handler(Looper.getMainLooper());
-                        main.post(new Runnable() {
-                            @Override
-                            public void run() {
-                                mCameraOverlayRenderer.clearOverlay();
-                            }
-                        });
-
-                        // request next camera frame
-                        mCamera.getCameraFrame();
-
-                    }
-
-                }
-
-
-            } else { // Braille recognition is not active
-
-                // draw translation on overlay
+            if(!mBrailleCellRecognitionActive) {
                 Handler main = new Handler(Looper.getMainLooper());
                 main.post(new Runnable() {
                     @Override
@@ -354,8 +236,28 @@ public class MainActivity extends AppCompatActivity {
                         mCameraOverlayRenderer.clearOverlay();
                     }
                 });
-
+                return;
             }
+
+            braillePipeline.setRotationCorrectionActive(mBrailleRotationCorrectionActive);
+            braillePipeline.setOriginalBrailleImage(brailleImage);
+            processorRegistry.executeProcessors(braillePipeline);
+
+            Handler main = new Handler(Looper.getMainLooper());
+            main.post(new Runnable() {
+                @Override
+                public void run() {
+                    if (braillePipeline.isCellsValid()) {
+                        mCameraOverlayRenderer.drawBrailleTranslation(braillePipeline);
+                    } else {
+                        mCameraOverlayRenderer.clearOverlay();
+                    }
+                }
+            });
+
+            // request next camera frame
+            mCamera.getCameraFrame();
+
         }
     };
 
@@ -500,5 +402,7 @@ public class MainActivity extends AppCompatActivity {
         mScreenCaptureButton.startAnimation(animSet);
         mRotationCorrectionButton.startAnimation(animSet);
     }
+
+    public native String stringFromJNI();
 
 }

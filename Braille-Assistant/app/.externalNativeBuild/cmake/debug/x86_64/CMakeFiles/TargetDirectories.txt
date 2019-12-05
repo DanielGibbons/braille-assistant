@@ -1,0 +1,3 @@
+/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/rebuild_cache.dir
+/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/edit_cache.dir
+/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/debug/x86_64/CMakeFiles/native-lib.dir

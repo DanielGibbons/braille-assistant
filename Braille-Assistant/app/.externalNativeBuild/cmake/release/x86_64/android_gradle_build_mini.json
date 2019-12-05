@@ -1,0 +1,18 @@
+{
+  "buildFiles": [
+    "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/CMakeLists.txt",
+    "/home/dan/Android/Sdk/ndk/20.1.5948944/build/cmake/android.toolchain.cmake",
+    "/home/dan/Android/Sdk/ndk/20.1.5948944/build/cmake/platforms.cmake"
+  ],
+  "cleanCommands": [
+    "/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/x86_64 --target clean"
+  ],
+  "libraries": {
+    "native-lib-Release-x86_64": {
+      "artifactName": "native-lib",
+      "buildCommand": "/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/x86_64 --target native-lib",
+      "abi": "x86_64",
+      "output": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/build/intermediates/cmake/release/obj/x86_64/libnative-lib.so"
+    }
+  }
+}
