@@ -3,17 +3,17 @@ The host system is: Linux - 4.15.0-66-generic - x86_64
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_5f6fb"
-[1/2] Building C object CMakeFiles/cmTC_5f6fb.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_5f6fb
+Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_e7c10"
+[1/2] Building C object CMakeFiles/cmTC_e7c10.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_e7c10
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_e4929"
-[1/2] Building C object CMakeFiles/cmTC_e4929.dir/CMakeCCompilerABI.c.o
-[2/2] Linking C executable cmTC_e4929
+Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_98562"
+[1/2] Building C object CMakeFiles/cmTC_98562.dir/CMakeCCompilerABI.c.o
+[2/2] Linking C executable cmTC_98562
 Android (5220042 based on r346389c) clang version 8.0.7 (https://android.googlesource.com/toolchain/clang b55f2d4ebfd35bf643d27dbca1bb228957008617) (https://android.googlesource.com/toolchain/llvm 3c393fe7a7e13b0fba4ac75a01aa683d7a5b11cd) (based on LLVM 8.0.7svn)
 Target: armv7-none-linux-android23
 Thread model: posix
@@ -25,16 +25,16 @@ Candidate multilib: armv7-a;@march=armv7-a
 Candidate multilib: armv7-a/thumb;@march=armv7-a@mthumb
 Candidate multilib: .;
 Selected multilib: armv7-a/thumb;@march=armv7-a@mthumb
- "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot -pie -EL -z now -z relro -X --hash-style=gnu --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_e4929 /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtbegin_dynamic.o -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/lib/linux/arm -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23 -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/../../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --exclude-libs libunwind.a --no-undefined -z noexecstack --gc-sections CMakeFiles/cmTC_e4929.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtend_android.o
+ "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot -pie -EL -z now -z relro -X --hash-style=gnu --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_98562 /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtbegin_dynamic.o -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/lib/linux/arm -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23 -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/../../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --exclude-libs libunwind.a --no-undefined -z noexecstack --gc-sections CMakeFiles/cmTC_98562.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtend_android.o
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(arm-linux-androideabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_e4929"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_e4929.dir/CMakeCCompilerABI.c.o]
-  ignore line: [[2/2] Linking C executable cmTC_e4929]
+  ignore line: [Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_98562"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_98562.dir/CMakeCCompilerABI.c.o]
+  ignore line: [[2/2] Linking C executable cmTC_98562]
   ignore line: [Android (5220042 based on r346389c) clang version 8.0.7 (https://android.googlesource.com/toolchain/clang b55f2d4ebfd35bf643d27dbca1bb228957008617) (https://android.googlesource.com/toolchain/llvm 3c393fe7a7e13b0fba4ac75a01aa683d7a5b11cd) (based on LLVM 8.0.7svn)]
   ignore line: [Target: armv7-none-linux-android23]
   ignore line: [Thread model: posix]
@@ -51,7 +51,7 @@ Parsed C implicit link information from above output:
   ignore line: []
   ignore line: [Selected multilib: armv7-a/thumb]
   ignore line: [@march=armv7-a@mthumb]
-  link line: [ "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot -pie -EL -z now -z relro -X --hash-style=gnu --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_e4929 /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtbegin_dynamic.o -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/lib/linux/arm -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23 -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/../../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --exclude-libs libunwind.a --no-undefined -z noexecstack --gc-sections CMakeFiles/cmTC_e4929.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtend_android.o]
+  link line: [ "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot -pie -EL -z now -z relro -X --hash-style=gnu --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_98562 /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtbegin_dynamic.o -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/lib/linux/arm -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23 -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/../../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --exclude-libs libunwind.a --no-undefined -z noexecstack --gc-sections CMakeFiles/cmTC_98562.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtend_android.o]
     arg [/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld] ==> ignore
     arg [--sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot] ==> ignore
     arg [-pie] ==> ignore
@@ -67,7 +67,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/system/bin/linker] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_e4929] ==> ignore
+    arg [cmTC_98562] ==> ignore
     arg [/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtbegin_dynamic.o] ==> ignore
     arg [-L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/lib/linux/arm] ==> dir [/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/lib/linux/arm]
     arg [-L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb] ==> dir [/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb]
@@ -90,7 +90,7 @@ Parsed C implicit link information from above output:
     arg [--no-undefined] ==> ignore
     arg [-znoexecstack] ==> ignore
     arg [--gc-sections] ==> ignore
-    arg [CMakeFiles/cmTC_e4929.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_98562.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [-ldl] ==> lib [dl]
     arg [-lc] ==> lib [c]
@@ -116,9 +116,9 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_66d51"
-[1/2] Building C object CMakeFiles/cmTC_66d51.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_66d51
+Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_f7cf2"
+[1/2] Building C object CMakeFiles/cmTC_f7cf2.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_f7cf2
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -130,9 +130,9 @@ Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_6
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_57e79"
-[1/2] Building C object CMakeFiles/cmTC_57e79.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_57e79
+Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_64985"
+[1/2] Building C object CMakeFiles/cmTC_64985.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_64985
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -144,9 +144,9 @@ Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_5
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_88ef8"
-[1/2] Building C object CMakeFiles/cmTC_88ef8.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_88ef8
+Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_e8c14"
+[1/2] Building C object CMakeFiles/cmTC_e8c14.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_e8c14
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -156,17 +156,17 @@ Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_8
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_d2723"
-[1/2] Building CXX object CMakeFiles/cmTC_d2723.dir/testCXXCompiler.cxx.o
-[2/2] Linking CXX executable cmTC_d2723
+Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_a2e6c"
+[1/2] Building CXX object CMakeFiles/cmTC_a2e6c.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_a2e6c
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_15c9e"
-[1/2] Building CXX object CMakeFiles/cmTC_15c9e.dir/CMakeCXXCompilerABI.cpp.o
-[2/2] Linking CXX executable cmTC_15c9e
+Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_6d2bb"
+[1/2] Building CXX object CMakeFiles/cmTC_6d2bb.dir/CMakeCXXCompilerABI.cpp.o
+[2/2] Linking CXX executable cmTC_6d2bb
 Android (5220042 based on r346389c) clang version 8.0.7 (https://android.googlesource.com/toolchain/clang b55f2d4ebfd35bf643d27dbca1bb228957008617) (https://android.googlesource.com/toolchain/llvm 3c393fe7a7e13b0fba4ac75a01aa683d7a5b11cd) (based on LLVM 8.0.7svn)
 Target: armv7-none-linux-android23
 Thread model: posix
@@ -178,16 +178,16 @@ Candidate multilib: armv7-a;@march=armv7-a
 Candidate multilib: armv7-a/thumb;@march=armv7-a@mthumb
 Candidate multilib: .;
 Selected multilib: armv7-a/thumb;@march=armv7-a@mthumb
- "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot -pie -EL -z now -z relro -X --hash-style=gnu --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_15c9e /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtbegin_dynamic.o -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/lib/linux/arm -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23 -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/../../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --exclude-libs libunwind.a --no-undefined -z noexecstack --gc-sections CMakeFiles/cmTC_15c9e.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm -lgcc -ldl -lc -lgcc -ldl /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtend_android.o
+ "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot -pie -EL -z now -z relro -X --hash-style=gnu --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_6d2bb /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtbegin_dynamic.o -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/lib/linux/arm -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23 -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/../../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --exclude-libs libunwind.a --no-undefined -z noexecstack --gc-sections CMakeFiles/cmTC_6d2bb.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm -lgcc -ldl -lc -lgcc -ldl /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtend_android.o
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(arm-linux-androideabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_15c9e"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_15c9e.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [[2/2] Linking CXX executable cmTC_15c9e]
+  ignore line: [Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_6d2bb"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_6d2bb.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [[2/2] Linking CXX executable cmTC_6d2bb]
   ignore line: [Android (5220042 based on r346389c) clang version 8.0.7 (https://android.googlesource.com/toolchain/clang b55f2d4ebfd35bf643d27dbca1bb228957008617) (https://android.googlesource.com/toolchain/llvm 3c393fe7a7e13b0fba4ac75a01aa683d7a5b11cd) (based on LLVM 8.0.7svn)]
   ignore line: [Target: armv7-none-linux-android23]
   ignore line: [Thread model: posix]
@@ -204,7 +204,7 @@ Parsed CXX implicit link information from above output:
   ignore line: []
   ignore line: [Selected multilib: armv7-a/thumb]
   ignore line: [@march=armv7-a@mthumb]
-  link line: [ "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot -pie -EL -z now -z relro -X --hash-style=gnu --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_15c9e /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtbegin_dynamic.o -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/lib/linux/arm -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23 -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/../../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --exclude-libs libunwind.a --no-undefined -z noexecstack --gc-sections CMakeFiles/cmTC_15c9e.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm -lgcc -ldl -lc -lgcc -ldl /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtend_android.o]
+  link line: [ "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld" --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot -pie -EL -z now -z relro -X --hash-style=gnu --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_6d2bb /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtbegin_dynamic.o -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/lib/linux/arm -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/../lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23 -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/../../lib -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/lib/armv7-a/thumb -L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib --exclude-libs libgcc.a --exclude-libs libatomic.a --build-id --warn-shared-textrel --fatal-warnings --exclude-libs libunwind.a --no-undefined -z noexecstack --gc-sections CMakeFiles/cmTC_6d2bb.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm -lgcc -ldl -lc -lgcc -ldl /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtend_android.o]
     arg [/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/../../../../arm-linux-androideabi/bin/ld] ==> ignore
     arg [--sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot] ==> ignore
     arg [-pie] ==> ignore
@@ -220,7 +220,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/system/bin/linker] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_15c9e] ==> ignore
+    arg [cmTC_6d2bb] ==> ignore
     arg [/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/23/crtbegin_dynamic.o] ==> ignore
     arg [-L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/lib/linux/arm] ==> dir [/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/lib/linux/arm]
     arg [-L/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb] ==> dir [/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/armv7-a/thumb]
@@ -243,7 +243,7 @@ Parsed CXX implicit link information from above output:
     arg [--no-undefined] ==> ignore
     arg [-znoexecstack] ==> ignore
     arg [--gc-sections] ==> ignore
-    arg [CMakeFiles/cmTC_15c9e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_6d2bb.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-Bstatic] ==> ignore
     arg [-lc++] ==> lib [c++]
     arg [-Bdynamic] ==> ignore
@@ -273,9 +273,9 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_b630d"
-[1/2] Building CXX object CMakeFiles/cmTC_b630d.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_b630d
+Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_d5a0d"
+[1/2] Building CXX object CMakeFiles/cmTC_d5a0d.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_d5a0d
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -340,9 +340,9 @@ Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_b
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_66d60"
-[1/2] Building CXX object CMakeFiles/cmTC_66d60.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_66d60
+Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_6a937"
+[1/2] Building CXX object CMakeFiles/cmTC_6a937.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_6a937
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -407,9 +407,9 @@ Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_6
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_d1eed"
-[1/2] Building CXX object CMakeFiles/cmTC_d1eed.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_d1eed
+Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_9b0aa"
+[1/2] Building CXX object CMakeFiles/cmTC_9b0aa.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_9b0aa
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -474,9 +474,9 @@ Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_d
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_a269c"
-[1/2] Building CXX object CMakeFiles/cmTC_a269c.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_a269c
+Run Build Command:"/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_7bfc1"
+[1/2] Building CXX object CMakeFiles/cmTC_7bfc1.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_7bfc1
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

@@ -1,7 +1,8 @@
 {
   "stringTable": {
     "0": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a",
-    "1": "--target=armv7-none-linux-androideabi23 --gcc-toolchain=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dnative_lib_EXPORTS -I../../../../src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -Oz -DNDEBUG -fPIC"
+    "1": "--target=armv7-none-linux-androideabi23 --gcc-toolchain=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dliblouiswrapper_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -Oz -DNDEBUG -fPIC",
+    "2": "--target=armv7-none-linux-androideabi23 --gcc-toolchain=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -Oz -DNDEBUG -fPIC"
   },
   "buildFiles": [
     "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/CMakeLists.txt",
@@ -12,28 +13,66 @@
     "/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a --target clean"
   ],
   "libraries": {
-    "native-lib-Release-armeabi-v7a": {
-      "buildCommand": "/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a --target native-lib",
+    "liblouiswrapper-Release-armeabi-v7a": {
+      "buildCommand": "/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a --target liblouiswrapper",
       "buildType": "release",
-      "toolchain": "2832019330",
+      "toolchain": "2379395200",
       "abi": "armeabi-v7a",
-      "artifactName": "native-lib",
+      "artifactName": "liblouiswrapper",
       "files": [
         {
-          "src": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/native-lib.cpp",
+          "src": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/lib-louis-wrapper.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         }
       ],
-      "output": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/build/intermediates/cmake/release/obj/armeabi-v7a/libnative-lib.so"
+      "output": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/build/intermediates/cmake/release/obj/armeabi-v7a/libliblouiswrapper.so"
+    },
+    "liblouis-Release-armeabi-v7a": {
+      "buildCommand": "/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a --target liblouis",
+      "buildType": "release",
+      "toolchain": "2379395200",
+      "abi": "armeabi-v7a",
+      "artifactName": "liblouis",
+      "files": [
+        {
+          "src": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/compileTranslationTable.c",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/logging.c",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/lou_backTranslateString.c",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/lou_translateString.c",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/wrappers.c",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "output": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/armeabi-v7a/libliblouis.a"
     }
   },
   "toolchains": {
-    "2832019330": {
+    "2379395200": {
+      "cCompilerExecutable": "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
       "cppCompilerExecutable": "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
     }
   },
-  "cFileExtensions": [],
+  "cFileExtensions": [
+    "c"
+  ],
   "cppFileExtensions": [
     "cpp"
   ]

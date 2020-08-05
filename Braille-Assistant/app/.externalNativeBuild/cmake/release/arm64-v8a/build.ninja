@@ -49,44 +49,92 @@ build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
   restat = 1
 build edit_cache: phony CMakeFiles/edit_cache.util
 # =============================================================================
-# Object build statements for SHARED_LIBRARY target native-lib
+# Object build statements for SHARED_LIBRARY target liblouiswrapper
 
 
 #############################################
-# Order-only phony target for native-lib
+# Order-only phony target for liblouiswrapper
 
-build cmake_object_order_depends_target_native-lib: phony
-build CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/native-lib.cpp || cmake_object_order_depends_target_native-lib
-  DEFINES = -Dnative_lib_EXPORTS
-  DEP_FILE = CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o.d
+build cmake_object_order_depends_target_liblouiswrapper: phony || cmake_object_order_depends_target_liblouis
+build CMakeFiles/liblouiswrapper.dir/src/main/cpp/lib-louis-wrapper.cpp.o: CXX_COMPILER__liblouiswrapper ../../../../src/main/cpp/lib-louis-wrapper.cpp || cmake_object_order_depends_target_liblouiswrapper
+  DEFINES = -Dliblouiswrapper_EXPORTS
+  DEP_FILE = CMakeFiles/liblouiswrapper.dir/src/main/cpp/lib-louis-wrapper.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC
-  INCLUDES = -I../../../../src/main/cpp/include
-  OBJECT_DIR = CMakeFiles/native-lib.dir
-  OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/src/main/cpp
+  OBJECT_DIR = CMakeFiles/liblouiswrapper.dir
+  OBJECT_FILE_DIR = CMakeFiles/liblouiswrapper.dir/src/main/cpp
 
 # =============================================================================
-# Link build statements for SHARED_LIBRARY target native-lib
+# Link build statements for SHARED_LIBRARY target liblouiswrapper
 
 
 #############################################
-# Link the shared library ../../../../build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so
+# Link the shared library ../../../../build/intermediates/cmake/release/obj/arm64-v8a/libliblouiswrapper.so
 
-build ../../../../build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so: CXX_SHARED_LIBRARY_LINKER__native-lib CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o
+build ../../../../build/intermediates/cmake/release/obj/arm64-v8a/libliblouiswrapper.so: CXX_SHARED_LIBRARY_LINKER__liblouiswrapper CMakeFiles/liblouiswrapper.dir/src/main/cpp/lib-louis-wrapper.cpp.o | /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/23/liblog.so /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/23/libandroid.so libliblouis.a /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/23/liblog.so /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/23/libandroid.so || libliblouis.a
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG
   LINK_FLAGS = -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id -Wl,--warn-shared-textrel -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack
-  LINK_LIBRARIES = -latomic -lm
-  OBJECT_DIR = CMakeFiles/native-lib.dir
+  LINK_LIBRARIES = /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/23/liblog.so /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/23/libandroid.so libliblouis.a /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/23/liblog.so /home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/23/libandroid.so -latomic -lm
+  OBJECT_DIR = CMakeFiles/liblouiswrapper.dir
   POST_BUILD = :
   PRE_LINK = :
-  SONAME = libnative-lib.so
+  SONAME = libliblouiswrapper.so
   SONAME_FLAG = -Wl,-soname,
-  TARGET_FILE = ../../../../build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so
-  TARGET_PDB = native-lib.so.dbg
+  TARGET_FILE = ../../../../build/intermediates/cmake/release/obj/arm64-v8a/libliblouiswrapper.so
+  TARGET_PDB = liblouiswrapper.so.dbg
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target liblouis
+
+
+#############################################
+# Order-only phony target for liblouis
+
+build cmake_object_order_depends_target_liblouis: phony
+build CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/compileTranslationTable.c.o: C_COMPILER__liblouis ../../../../src/main/cpp/liblouis/liblouis/compileTranslationTable.c || cmake_object_order_depends_target_liblouis
+  DEP_FILE = CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/compileTranslationTable.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
+  OBJECT_DIR = CMakeFiles/liblouis.dir
+  OBJECT_FILE_DIR = CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis
+build CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/logging.c.o: C_COMPILER__liblouis ../../../../src/main/cpp/liblouis/liblouis/logging.c || cmake_object_order_depends_target_liblouis
+  DEP_FILE = CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/logging.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
+  OBJECT_DIR = CMakeFiles/liblouis.dir
+  OBJECT_FILE_DIR = CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis
+build CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/lou_backTranslateString.c.o: C_COMPILER__liblouis ../../../../src/main/cpp/liblouis/liblouis/lou_backTranslateString.c || cmake_object_order_depends_target_liblouis
+  DEP_FILE = CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/lou_backTranslateString.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
+  OBJECT_DIR = CMakeFiles/liblouis.dir
+  OBJECT_FILE_DIR = CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis
+build CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/lou_translateString.c.o: C_COMPILER__liblouis ../../../../src/main/cpp/liblouis/liblouis/lou_translateString.c || cmake_object_order_depends_target_liblouis
+  DEP_FILE = CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/lou_translateString.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
+  OBJECT_DIR = CMakeFiles/liblouis.dir
+  OBJECT_FILE_DIR = CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis
+build CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/wrappers.c.o: C_COMPILER__liblouis ../../../../src/main/cpp/liblouis/liblouis/wrappers.c || cmake_object_order_depends_target_liblouis
+  DEP_FILE = CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/wrappers.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
+  OBJECT_DIR = CMakeFiles/liblouis.dir
+  OBJECT_FILE_DIR = CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target liblouis
+
+
+#############################################
+# Link the static library libliblouis.a
+
+build libliblouis.a: C_STATIC_LIBRARY_LINKER__liblouis CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/compileTranslationTable.c.o CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/logging.c.o CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/lou_backTranslateString.c.o CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/lou_translateString.c.o CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/wrappers.c.o
+  LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG
+  OBJECT_DIR = CMakeFiles/liblouis.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libliblouis.a
+  TARGET_PDB = liblouis.a.dbg
 # =============================================================================
 # Target aliases.
 
-build libnative-lib.so: phony ../../../../build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so
-build native-lib: phony ../../../../build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so
+build libliblouiswrapper.so: phony ../../../../build/intermediates/cmake/release/obj/arm64-v8a/libliblouiswrapper.so
+build liblouis: phony libliblouis.a
+build liblouiswrapper: phony ../../../../build/intermediates/cmake/release/obj/arm64-v8a/libliblouiswrapper.so
 # =============================================================================
 # Folder targets.
 
@@ -98,7 +146,7 @@ build native-lib: phony ../../../../build/intermediates/cmake/release/obj/arm64-
 #############################################
 # The main all target.
 
-build all: phony ../../../../build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so
+build all: phony ../../../../build/intermediates/cmake/release/obj/arm64-v8a/libliblouiswrapper.so libliblouis.a
 
 #############################################
 # Make the all target the default.
@@ -108,13 +156,13 @@ default all
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../../../../CMakeLists.txt /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake /home/dan/Android/Sdk/ndk/20.1.5948944/build/cmake/android.toolchain.cmake /home/dan/Android/Sdk/ndk/20.1.5948944/build/cmake/platforms.cmake CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../../../../CMakeLists.txt /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompilerABI.c /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCCompiler.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCXXCompiler.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystem.cmake.in /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCCompiler.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCXXCompiler.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-C.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-CXX.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake /home/dan/Android/Sdk/ndk/20.1.5948944/build/cmake/android.toolchain.cmake /home/dan/Android/Sdk/ndk/20.1.5948944/build/cmake/platforms.cmake CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake CMakeFiles/feature_tests.c CMakeFiles/feature_tests.cxx
   pool = console
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../../../../CMakeLists.txt /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake /home/dan/Android/Sdk/ndk/20.1.5948944/build/cmake/android.toolchain.cmake /home/dan/Android/Sdk/ndk/20.1.5948944/build/cmake/platforms.cmake CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake: phony
+build ../../../../CMakeLists.txt /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompilerABI.c /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCCompiler.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCXXCompiler.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystem.cmake.in /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCCompiler.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCXXCompiler.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-C.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-CXX.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake /home/dan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake /home/dan/Android/Sdk/ndk/20.1.5948944/build/cmake/android.toolchain.cmake /home/dan/Android/Sdk/ndk/20.1.5948944/build/cmake/platforms.cmake CMakeCache.txt CMakeFiles/3.10.2/CMakeCCompiler.cmake CMakeFiles/3.10.2/CMakeCXXCompiler.cmake CMakeFiles/3.10.2/CMakeSystem.cmake CMakeFiles/feature_tests.c CMakeFiles/feature_tests.cxx: phony
 
 #############################################
 # Clean all the built files.

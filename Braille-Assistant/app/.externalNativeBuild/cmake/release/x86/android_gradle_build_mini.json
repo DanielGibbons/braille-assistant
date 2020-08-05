@@ -8,11 +8,17 @@
     "/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/x86 --target clean"
   ],
   "libraries": {
-    "native-lib-Release-x86": {
-      "artifactName": "native-lib",
-      "buildCommand": "/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/x86 --target native-lib",
+    "liblouis-Release-x86": {
+      "artifactName": "liblouis",
+      "buildCommand": "/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/x86 --target liblouis",
       "abi": "x86",
-      "output": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/build/intermediates/cmake/release/obj/x86/libnative-lib.so"
+      "output": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/x86/libliblouis.a"
+    },
+    "liblouiswrapper-Release-x86": {
+      "artifactName": "liblouiswrapper",
+      "buildCommand": "/home/dan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/release/x86 --target liblouiswrapper",
+      "abi": "x86",
+      "output": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/build/intermediates/cmake/release/obj/x86/libliblouiswrapper.so"
     }
   }
 }

@@ -30,6 +30,7 @@ import org.example.brailleassistant.utils.BraillePipeline;
 import org.example.brailleassistant.utils.Camera;
 import org.example.brailleassistant.utils.CameraFrameReader;
 import org.example.brailleassistant.utils.CameraOverlayRenderer;
+import org.example.brailleassistant.utils.LibLouisWrapper;
 import org.opencv.core.Mat;
 
 import java.io.File;
@@ -42,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
 
     static {
         System.loadLibrary("opencv_java4");
-        System.loadLibrary("native-lib");
     }
 
     // Permission constants
@@ -94,13 +94,12 @@ public class MainActivity extends AppCompatActivity {
         assert mRotationCorrectionButton != null;
 
         // Initialise processors
-        processorRegistry = new ProcessorRegistry();
+        processorRegistry = new ProcessorRegistry(this);
         braillePipeline = new BraillePipeline();
 
         // Initialise  Camera and CameraOverlayRenderer
         mCameraOverlayRenderer = new CameraOverlayRenderer(mCameraOverlayView);
         mCamera = new Camera(this, mCameraView, mOnFrameEventListener, mOnCameraPreviewSizeChangedListener);
-
 
     }
 
@@ -145,7 +144,6 @@ public class MainActivity extends AppCompatActivity {
             }
             case WRITE_EXTERNAL_STORAGE_PERMISSION: {
                 closeAppIfPermissionsAreAbsent(grantResults);
-                return;
             }
         }
     }
@@ -228,6 +226,14 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onFrameEvent(Mat brailleImage) {
 
+            byte[] cells = new byte[5];
+            cells[0] = (byte)'\u2820';
+            cells[1] = (byte)'\u281D';
+            cells[2] = (byte)'\u2825';
+            cells[3] = (byte)'\u281E';
+            cells[4] = (byte)'\u280E';
+            String translation = LibLouisWrapper.backTranslate(cells, "en-gb-g1.utb");
+
             if(!mBrailleCellRecognitionActive) {
                 Handler main = new Handler(Looper.getMainLooper());
                 main.post(new Runnable() {
@@ -261,20 +267,8 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private File createBrailleImageFile() {
-
-        File directory = new File(this.getExternalFilesDir(Environment.DIRECTORY_PICTURES),"BrailleImages");
-        if(!directory.exists()) {
-            directory.mkdir();
-        }
-        Date date = new Date();
-        CharSequence now = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", date);
-        return new File(directory,now + ".jpg");
-    }
-
     private File createScreenshotFile() {
 
-        //File directory = new File(this.getExternalFilesDir(Environment.DIRECTORY_PICTURES),"Screenshots");
         File directory = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"Braille Teacher");
 
         if(!directory.exists()) {
@@ -402,7 +396,5 @@ public class MainActivity extends AppCompatActivity {
         mScreenCaptureButton.startAnimation(animSet);
         mRotationCorrectionButton.startAnimation(animSet);
     }
-
-    public native String stringFromJNI();
 
 }

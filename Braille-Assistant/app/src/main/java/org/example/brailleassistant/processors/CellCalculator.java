@@ -105,10 +105,10 @@ public class CellCalculator extends IProcessor {
     }
 
     // find braille cell value for each cell
-    private short[][] extractBrailleCells(short[] brailleCellColumns, ArrayList[] brailleLineDotLocations) {
+    private byte[][] extractBrailleCells(short[] brailleCellColumns, ArrayList[] brailleLineDotLocations) {
 
         // 2D Array - Number of Braille lines x Number of Braille Cells per Line
-        short[][] brailleCells = new short[brailleLineDotLocations.length / 3][brailleCellColumns.length / 2];
+        byte[][] brailleCells = new byte[brailleLineDotLocations.length / 3][brailleCellColumns.length / 2];
 
         short currentBrailleLine = 0;
         short startingDot, lowerBound, upperBound, intermediateBound;
@@ -131,9 +131,9 @@ public class CellCalculator extends IProcessor {
 
                         if (x > lowerBound && x < upperBound) {
                             if (x <= intermediateBound) {
-                                brailleCells[currentBrailleLine][brailleCell / 2] |= (short) Math.pow(2, brailleRow);
+                                brailleCells[currentBrailleLine][brailleCell / 2] |= (byte) Math.pow(2, brailleRow);
                             } else {
-                                brailleCells[currentBrailleLine][brailleCell / 2] |= (short) Math.pow(2, (brailleRow + 3));
+                                brailleCells[currentBrailleLine][brailleCell / 2] |= (byte) Math.pow(2, (brailleRow + 3));
                             }
 
                         } else if (x > upperBound) {

@@ -11,13 +11,31 @@ cmake_minimum_required(VERSION 3.4.1)
 # automatically packages shared libraries with your APK.
 
 add_library( # Specifies the name of the library.
-             native-lib
+        liblouis
+
+        # Sets the library as a shared library.
+        STATIC
+
+        # Provides a relative path to your source file(s).
+        src/main/cpp/liblouis/liblouis/compileTranslationTable.c
+        src/main/cpp/liblouis/liblouis/logging.c
+        src/main/cpp/liblouis/liblouis/lou_backTranslateString.c
+        src/main/cpp/liblouis/liblouis/lou_translateString.c
+        src/main/cpp/liblouis/liblouis/wrappers.c)
+
+add_library( # Specifies the name of the library.
+             liblouiswrapper
 
              # Sets the library as a shared library.
              SHARED
 
              # Provides a relative path to your source file(s).
-        src/main/cpp/native-lib.cpp)
+             src/main/cpp/lib-louis-wrapper.cpp)
 
-# Specifies a path to native header files.
-include_directories(src/main/cpp/include/)
+find_library(log-lib log)
+find_library(android-lib android)
+target_link_libraries(liblouis ${log-lib})
+target_link_libraries(liblouis ${android-lib})
+target_link_libraries(liblouiswrapper ${log-lib})
+target_link_libraries(liblouiswrapper ${android-lib})
+target_link_libraries(liblouiswrapper liblouis)

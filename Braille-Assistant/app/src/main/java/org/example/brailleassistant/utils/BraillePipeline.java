@@ -27,7 +27,7 @@ public class BraillePipeline {
     private boolean isCellsValid;
 
     // Cell Calculator
-    private short[][] brailleCellValues;
+    private byte[][] brailleCellValues;
 
     // Cell Parser
     private String [][] brailleCellTranslation;
@@ -121,11 +121,11 @@ public class BraillePipeline {
         isCellsValid = cellsValid;
     }
 
-    public short[][] getBrailleCellValues() {
+    public byte[][] getBrailleCellValues() {
         return brailleCellValues;
     }
 
-    public void setBrailleCellValues(short[][] brailleCellValues) {
+    public void setBrailleCellValues(byte[][] brailleCellValues) {
         this.brailleCellValues = brailleCellValues;
     }
 

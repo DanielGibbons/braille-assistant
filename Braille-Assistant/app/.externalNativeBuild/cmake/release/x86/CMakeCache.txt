@@ -201,8 +201,8 @@ CMAKE_SYSTEM_NAME:UNINITIALIZED=Android
 //No help, variable specified on the command line.
 CMAKE_SYSTEM_VERSION:UNINITIALIZED=23
 
-//No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/home/dan/Android/Sdk/ndk/20.1.5948944/build/cmake/android.toolchain.cmake
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/dan/Android/Sdk/ndk/20.1.5948944/build/cmake/android.toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -216,8 +216,17 @@ Project_BINARY_DIR:STATIC=/home/dan/Documents/Projects/Braille-Assistant/Braille
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app
 
-//Dependencies for target
-native-lib_LIB_DEPENDS:STATIC=
+//Path to a library.
+android-lib:FILEPATH=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/i686-linux-android/23/libandroid.so
+
+//Dependencies for the target
+liblouis_LIB_DEPENDS:STATIC=general;/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/i686-linux-android/23/liblog.so;general;/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/i686-linux-android/23/libandroid.so;
+
+//Dependencies for the target
+liblouiswrapper_LIB_DEPENDS:STATIC=general;/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/i686-linux-android/23/liblog.so;general;/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/i686-linux-android/23/libandroid.so;general;liblouis;
+
+//Path to a library.
+log-lib:FILEPATH=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/i686-linux-android/23/liblog.so
 
 
 ########################

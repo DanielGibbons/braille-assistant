@@ -1,4 +1,5 @@
 /app/build
+/app/.externalNativeBuild/*
 /openCVLibrary410/build
 .gradle
 /.idea

@@ -1,7 +1,37 @@
 [
 {
   "directory": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/debug/arm64-v8a",
-  "command": "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android23 --gcc-toolchain=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dnative_lib_EXPORTS -I../../../../src/main/cpp/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o -c /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/native-lib.cpp",
-  "file": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/native-lib.cpp"
+  "command": "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android23 --gcc-toolchain=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -Dliblouiswrapper_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CMakeFiles/liblouiswrapper.dir/src/main/cpp/lib-louis-wrapper.cpp.o -c /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/lib-louis-wrapper.cpp",
+  "file": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/lib-louis-wrapper.cpp"
+},
+
+{
+  "directory": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/debug/arm64-v8a",
+  "command": "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android23 --gcc-toolchain=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/compileTranslationTable.c.o   -c /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/compileTranslationTable.c",
+  "file": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/compileTranslationTable.c"
+},
+
+{
+  "directory": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/debug/arm64-v8a",
+  "command": "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android23 --gcc-toolchain=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/logging.c.o   -c /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/logging.c",
+  "file": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/logging.c"
+},
+
+{
+  "directory": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/debug/arm64-v8a",
+  "command": "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android23 --gcc-toolchain=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/lou_backTranslateString.c.o   -c /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/lou_backTranslateString.c",
+  "file": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/lou_backTranslateString.c"
+},
+
+{
+  "directory": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/debug/arm64-v8a",
+  "command": "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android23 --gcc-toolchain=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/lou_translateString.c.o   -c /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/lou_translateString.c",
+  "file": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/lou_translateString.c"
+},
+
+{
+  "directory": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/.externalNativeBuild/cmake/debug/arm64-v8a",
+  "command": "/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=aarch64-none-linux-android23 --gcc-toolchain=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/dan/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CMakeFiles/liblouis.dir/src/main/cpp/liblouis/liblouis/wrappers.c.o   -c /home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/wrappers.c",
+  "file": "/home/dan/Documents/Projects/Braille-Assistant/Braille-Assistant/app/src/main/cpp/liblouis/liblouis/wrappers.c"
 }
 ]
